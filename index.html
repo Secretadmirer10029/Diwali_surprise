@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali Neethu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="intro">
+        <button id="start-button">Missing Diwali with family?</button>
+    </div>
+
+    <div id="content" style="display:none;">
+        <h1>❤❤ ஹேப்பி தீபாவளி ஹனிகுட்டி ❤❤</h1>
+        <div class="image-container">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="hehe1.jpg" alt="Image 1">
+                    </div>
+                    <div class="back">
+                        <div class="text-box">
+                            Happy Diwali, Neethu 🌟
+
+                            It’s Diwali, a festival of lights,
+                            And even though you’re far, we share this night.
+                            From Tirupati to NYC, your spirit shines so true—
+                            In all that you face, remember, we’re incredibly proud of you.<br>
+                            
+                            This may be the first year you’re far from home,
+                            But you carry that warmth wherever you roam.
+                            Rough patches come, yet they also go,
+                            And I know you’ll rise through it all, as we both know.<br>
+
+                            So tonight, let hope fill your heart,
+                            A reminder this Diwali: you’re strong and so smart.
+                            What lies ahead is just another part of your story—
+                            You’re loved, you’re cherished, you’re bound for glory.<br>
+
+                            This journey is yours to lead,
+                            With strength and grace, you’ll plant each seed.
+                            And I’m here with you, whether near or far apart,
+                            Missing you endlessly, from the depths of my heart. ❤
+                            
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="front">
+                        <img src="phat.jpg" alt="Image 2">
+                    </div>
+                    <div class="back">
+                        <div class="text-box">Leaving this blank cuz my surprise was supposed to be here(hidden inside what i wanted to write here) but you told to stop kada so yeah.
+                            and yes i dont have a photo of us together so used this. Peace..
+                            <br>
+                            i couldnt send you without saying what i wanted to write here so heres one small line "You are my favourite incomplete wish"<br>
+                            And neekosam mudhu peru alochistu alochistu i got one word "AMMADI", which means honey or dear one.<br>
+                            If you permit i wanna call you with that from now on :)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <video id="background-video" autoplay loop muted>
+        <source src="crackers (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://web.whatsapp.com/" target="_blank">Feeling emotional? Call your parents, bangaram</a>
+            <a href="https://web.whatsapp.com/" target="_blank">Feeling senti? Call me</a>
+            <a href="#" id="popup-link">Daridranga undha?</a>
+        </div>
+    </footer>
+
+
+<div id="popup-message" class="popup" style="display:none;">
+    <button class="cross-button" onclick="closePopup()">✖</button> 
+    <p>Thanks for opening (kastam aina istam tho chesa), adhigooo a pinaaa oka moola cross untundi adi press cheste website close aipothundi :)<br>
+        sorry for this dull and lame and rubbish ui and animations i dint have time and i am new to frontend:/</p>
+</div>
+
+
+    <script>
+        document.getElementById('start-button').onclick = function() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        };
+
+        document.getElementById('popup-link').onclick = function(event) {
+            event.preventDefault(); 
+            document.getElementById('popup-message').style.display = 'block';
+        };
+
+        function closePopup() {
+            document.getElementById('popup-message').style.display = 'none';
+        }
+
+        document.addEventListener('mousemove', function(e) {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            document.body.appendChild(heart);
+            heart.style.left = e.pageX + 'px';
+            heart.style.top = e.pageY + 'px';
+            setTimeout(() => {
+                heart.remove();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

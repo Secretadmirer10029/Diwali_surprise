@@ -1,0 +1,202 @@
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    cursor: url('sparkler.png'), auto;
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 69, 0, 0.1);
+    color: white;
+}
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: rgba(253, 0, 219, 0.796);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 200px);
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 30%;
+    height: 70%;
+    box-shadow: 0 0 15px rbga(180,140,255,0.5);
+}
+
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 19px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('heart.png') no-repeat center/contain;
+    animation: fly 1s forwards;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(0);
+        opacity: 0;
+    }
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer-links a {
+    color: rgba(218, 71, 130, 0.575);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: rgba(218, 71, 130, 0.575);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: none;
+}
+
+.cross-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.cross-button:hover {
+    color: #cc0000;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
